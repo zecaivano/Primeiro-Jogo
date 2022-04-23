@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+var numeroPensado = Math.round(Math.random() * 10);
+
+var tentativas = 1;
+
+while(tentativas <= 3) {
+
+    var chute = parseInt(prompt("Já pensei! Tente adivinhar! Digite um número de 0 a 10"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Uau, Você ACERTOU!, meu número era o " + numeroPensado + "!");
+        break;
+    } if (chute < numeroPensado) {
+
+        alert("Eita, você ERROU! Meu número é maior do que o seu.");
+
+    } else {
+
+        alert("Xiii, você ERROU! Meu número é menor do que o seu.");
+    }
+
+    tentativas++;
+}
+if(tentativas == 1){
+    mostra("O miserável é um gênio!! De primeira!! Marcou 5 pontos!");
+}   if(tentativas == 2){
+        mostra("Tragam um troféu pra você! Release the Kraken!! De segunda!! Mandou bem! Marcou 3 pontos!");
+    }   if(tentativas == 3){
+            mostra("Acertô mizeravi!! De terceira!! Marcou 1 ponto!");
+        }   if(tentativas == 4){
+                mostra("Errrrrrrrrrrrrouuuuu!! E não marcou nenhum ponto!! O número pensado era " + numeroPensado + ". Faltou estratégia para você. Na guerra só os fortes sobrevivem, os fracos ficam pra trás.");
+                }
+
+
+mostra("FIM");
+</script>
